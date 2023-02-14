@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>698696626301-tumvvdssn9s1qmn9rljd6f542jrk14c6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.698696626301-tumvvdssn9s1qmn9rljd6f542jrk14c6</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>698696626301-7hfm06mdiltoa6ar1796o2cc6l6hqjl8.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8JuEEWuHXcc-IOWBDZW7CAUlyAC-ak0c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>698696626301</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.fishersc</string>
+	<key>PROJECT_ID</key>
+	<string>fisharoo-15fbc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fisharoo-15fbc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:698696626301:ios:75d227e40ab9e1c3acc114</string>
+	<key>DATABASE_URL</key>
+	<string>https://fisharoo-15fbc-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
