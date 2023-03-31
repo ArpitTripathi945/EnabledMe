@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
-        title: "FlutterPhoneAuth",
+        //title: "FlutterPhoneAuth",
       ),
     );
   }

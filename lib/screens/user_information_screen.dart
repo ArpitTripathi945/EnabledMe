@@ -5,6 +5,7 @@ import 'package:fishersc/model/user_model.dart';
 import 'package:fishersc/provider/auth_provider.dart';
 import 'package:fishersc/screens/profile_screen.dart';
 import 'package:fishersc/utils/utils.dart';
+import 'package:fishersc/welcomepwd.dart';
 import 'package:fishersc/widgets/custom_button.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -267,7 +268,7 @@ class _UserInfromationScreenState extends State<UserInfromationScreen> {
                       (value) => Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
+                            builder: (context) => const WelcomePWD(),
                           ),
                           (route) => false),
                     ),

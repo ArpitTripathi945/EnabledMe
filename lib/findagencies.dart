@@ -1,4 +1,4 @@
-import 'package:disability/findhospitals.dart';
+import 'package:fishersc/findhospitals.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

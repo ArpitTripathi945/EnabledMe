@@ -59,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Text(
               "Login",
               style: TextStyle(
-                  //fontFamily: GoogleFonts.poppins().fontFamily,
+                  fontFamily: GoogleFonts.staatliches().fontFamily,
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
                   color: primary),

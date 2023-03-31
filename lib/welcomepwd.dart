@@ -1,8 +1,13 @@
-import 'package:disability/checkschemes.dart';
-import 'package:disability/findagencies.dart';
-import 'package:disability/sortagencies.dart';
+import 'package:fishersc/checkschemes.dart';
+import 'package:fishersc/constants.dart';
+import 'package:fishersc/findagencies.dart';
+import 'package:fishersc/provider/auth_provider.dart';
+import 'package:fishersc/screens/profile_screen.dart';
+import 'package:fishersc/screens/welcome_screen.dart';
+import 'package:fishersc/sortagencies.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class WelcomePWD extends StatefulWidget {
   const WelcomePWD({Key? key}) : super(key: key);
@@ -14,45 +19,46 @@ class WelcomePWD extends StatefulWidget {
 class _WelcomePWDState extends State<WelcomePWD> {
   @override
   Widget build(BuildContext context) {
+    final ap = Provider.of<AuthProvider>(context, listen: false);
     return Scaffold(
       backgroundColor: const Color(0xffFFF3E9),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Material(
-                elevation: 5,
-                child: Container(
-                  height: 70,
-                  width: 350,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(15, 0, 5, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text(
-                          "EnabledMe",
-                          style: GoogleFonts.staatliches(
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                              color: const Color(0xff714C38)),
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.account_box),
-                          color: const Color(0xff714C38),
-                          iconSize: 35,
-                          onPressed: () {},
-                        )
-                      ],
+            Container(
+              height: 90,
+              width: 360,
+              child: Card(
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Row(
+                  children: [
+                    Text(
+                      "   EnabledMe",
+                      style: TextStyle(
+                          fontFamily: GoogleFonts.staatliches().fontFamily,
+                          color: primary,
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold),
                     ),
-                  ),
+                    SizedBox(width: 120),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ProfileScreen()));
+                        },
+                        child: Icon(Icons.account_circle_rounded,
+                            size: 30, color: primary)),
+                  ],
                 ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
               ),
             ),
             Padding(
