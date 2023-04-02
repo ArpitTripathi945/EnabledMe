@@ -1,3 +1,4 @@
+import 'package:fishersc/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -76,35 +77,35 @@ class _CheckSchemesState extends State<CheckSchemes> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Material(
-              elevation: 5,
-              child: Container(
-                height: 70,
-                width: 350,
-                color: Colors.white,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 0, 5, 0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      const Text(
-                        "EnabledMe",
-                        style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff714C38)),
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.account_box),
-                        color: const Color(0xff714C38),
-                        iconSize: 35,
-                        onPressed: () {},
-                      )
-                    ],
-                  ),
+          SizedBox(
+            height: 40,
+          ),
+          Center(
+            child: Container(
+              height: 90,
+              width: 360,
+              child: Card(
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Row(
+                  children: [
+                    Text(
+                      "   EnabledMe",
+                      style: TextStyle(
+                          fontFamily: GoogleFonts.staatliches().fontFamily,
+                          color: primary,
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(width: 160),
+                    Icon(Icons.verified_rounded, size: 30, color: Colors.green),
+                  ],
                 ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5,
+                margin: EdgeInsets.all(10),
               ),
             ),
           ),
@@ -168,7 +169,7 @@ class _CheckSchemesState extends State<CheckSchemes> {
                               ),
                               Row(
                                 children: [
-                                  Text('Disability Benefits Criteria- ',
+                                  Text('Benefits Criteria- ',
                                       style: GoogleFonts.poppins(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500,

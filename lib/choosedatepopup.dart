@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fishersc/constants.dart';
 import 'package:fishersc/welcomepwd.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -43,35 +44,36 @@ class _ChooseDatePopupState extends State<ChooseDatePopup> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Material(
-                elevation: 5,
-                child: Container(
-                  height: 70,
-                  width: 350,
-                  color: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(15, 0, 5, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text(
-                          "EnabledMe",
-                          style: GoogleFonts.staatliches(
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                              color: const Color(0xff714C38)),
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.account_box),
-                          color: const Color(0xff714C38),
-                          iconSize: 35,
-                          onPressed: () {},
-                        )
-                      ],
-                    ),
+            SizedBox(
+              height: 40,
+            ),
+            Center(
+              child: Container(
+                height: 90,
+                width: 360,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Row(
+                    children: [
+                      Text(
+                        "   EnabledMe",
+                        style: TextStyle(
+                            fontFamily: GoogleFonts.staatliches().fontFamily,
+                            color: primary,
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(width: 160),
+                      Icon(Icons.verified_rounded,
+                          size: 30, color: Colors.green),
+                    ],
                   ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  elevation: 5,
+                  margin: EdgeInsets.all(10),
                 ),
               ),
             ),
@@ -96,7 +98,7 @@ class _ChooseDatePopupState extends State<ChooseDatePopup> {
               padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
               child: Center(
                 child: Container(
-                  height: 280,
+                  height: 350,
                   width: 340,
                   decoration: const BoxDecoration(
                     boxShadow: [
@@ -114,7 +116,7 @@ class _ChooseDatePopupState extends State<ChooseDatePopup> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('Rao Tula Ram Memorial Hospital',
+                        Text('Medeor Hospital',
                             style: GoogleFonts.poppins(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
@@ -231,9 +233,9 @@ class _ChooseDatePopupState extends State<ChooseDatePopup> {
                                                                             Widget>[
                                                                           const SizedBox(
                                                                             height:
-                                                                                250,
+                                                                                230,
                                                                             width:
-                                                                                250,
+                                                                                230,
                                                                             child:
                                                                                 Image(image: AssetImage('assets/Frame.png')),
                                                                           ),
@@ -249,14 +251,17 @@ class _ChooseDatePopupState extends State<ChooseDatePopup> {
                                                                                 10,
                                                                           ),
                                                                           Text(
-                                                                              'Booking Id - #ooiinnd',
-                                                                              style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w500, color: const Color(0xffAB99A9))),
+                                                                              'Booking Id - #342567',
+                                                                              style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w500, color: const Color(0xffAB99A9))),
                                                                           Text(
-                                                                              'Appointment Date - ',
-                                                                              style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w500, color: const Color(0xffAB99A9))),
+                                                                              'Appointment Date - 04/04/2023',
+                                                                              style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w500, color: const Color(0xffAB99A9))),
                                                                           Text(
-                                                                              'Appointment Institution - ',
-                                                                              style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w500, color: const Color(0xffAB99A9))),
+                                                                              'Appointment Time - 08:00 AM',
+                                                                              style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w500, color: const Color(0xffAB99A9))),
+                                                                          Text(
+                                                                              'Appointment Institution - Medeor Hospital',
+                                                                              style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w500, color: const Color(0xffAB99A9))),
                                                                           const SizedBox(
                                                                             height:
                                                                                 20,
@@ -422,7 +427,7 @@ class SelectCard extends StatelessWidget {
                     style: GoogleFonts.poppins(
                         color: Colors.orange,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18)),
+                        fontSize: 16)),
                 const SizedBox(
                   height: 5,
                 ),
@@ -430,7 +435,7 @@ class SelectCard extends StatelessWidget {
                     style: GoogleFonts.poppins(
                         color: const Color(0xff28B446),
                         fontWeight: FontWeight.bold,
-                        fontSize: 40)),
+                        fontSize: 35)),
               ]),
         ));
   }

@@ -26,39 +26,45 @@ class _WelcomePWDState extends State<WelcomePWD> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Container(
-              height: 90,
-              width: 360,
-              child: Card(
-                semanticContainer: true,
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: Row(
-                  children: [
-                    Text(
-                      "   EnabledMe",
-                      style: TextStyle(
-                          fontFamily: GoogleFonts.staatliches().fontFamily,
-                          color: primary,
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(width: 120),
-                    InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ProfileScreen()));
-                        },
-                        child: Icon(Icons.account_circle_rounded,
-                            size: 30, color: primary)),
-                  ],
+            SizedBox(
+              height: 40,
+            ),
+            Center(
+              child: Container(
+                height: 90,
+                width: 360,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Row(
+                    children: [
+                      Text(
+                        "   EnabledMe",
+                        style: TextStyle(
+                            fontFamily: GoogleFonts.staatliches().fontFamily,
+                            color: primary,
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(width: 160),
+                      InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ProfileScreen()));
+                          },
+                          child: Icon(Icons.account_circle_rounded,
+                              size: 30, color: primary)),
+                    ],
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  elevation: 5,
+                  margin: EdgeInsets.all(10),
                 ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                elevation: 5,
-                margin: EdgeInsets.all(10),
               ),
             ),
             Padding(
@@ -86,17 +92,17 @@ class _WelcomePWDState extends State<WelcomePWD> {
                     children: <Widget>[
                       Text("Congratulations!",
                           style: GoogleFonts.poppins(
-                              fontSize: 22,
+                              fontSize: 19,
                               color: const Color(0xff714C38),
                               fontWeight: FontWeight.w500)),
                       Text("Your profile has been verified and",
                           style: GoogleFonts.poppins(
-                              fontSize: 16,
+                              fontSize: 14,
                               color: const Color(0xff714C38),
                               fontWeight: FontWeight.w500)),
                       Text("you are eligible for benefits.",
                           style: GoogleFonts.poppins(
-                              fontSize: 16,
+                              fontSize: 14,
                               color: const Color(0xff714C38),
                               fontWeight: FontWeight.w500))
                     ],
@@ -126,7 +132,7 @@ class _WelcomePWDState extends State<WelcomePWD> {
                       padding: const EdgeInsets.fromLTRB(15, 30, 20, 0),
                       child: Text("Book Slots for Benefits!",
                           style: GoogleFonts.staatliches(
-                              fontSize: 34,
+                              fontSize: 30,
                               color: const Color(0xffFFF3E9),
                               fontWeight: FontWeight.bold)),
                     ),
@@ -147,7 +153,7 @@ class _WelcomePWDState extends State<WelcomePWD> {
                                   color: Color(0xff714C38), size: 25),
                               Text("Find Nearest Implementing Agency",
                                   style: GoogleFonts.poppins(
-                                      fontSize: 15,
+                                      fontSize: 13,
                                       fontWeight: FontWeight.w500)),
                               ElevatedButton(
                                   onPressed: () {
@@ -191,7 +197,7 @@ class _WelcomePWDState extends State<WelcomePWD> {
                                   color: Color(0xff714C38), size: 25),
                               Text("Check out current available schemes",
                                   style: GoogleFonts.poppins(
-                                      fontSize: 15,
+                                      fontSize: 13,
                                       fontWeight: FontWeight.w500)),
                               ElevatedButton(
                                   onPressed: () {
@@ -235,7 +241,7 @@ class _WelcomePWDState extends State<WelcomePWD> {
                                   color: Color(0xff714C38), size: 20),
                               Text("Book Slots for Benefits",
                                   style: GoogleFonts.poppins(
-                                      fontSize: 15,
+                                      fontSize: 13,
                                       fontWeight: FontWeight.w500)),
                               ElevatedButton(
                                   onPressed: () {
