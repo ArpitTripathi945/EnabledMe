@@ -8,6 +8,7 @@ import 'package:fishersc/sortagencies.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:alan_voice/alan_voice.dart';
 
 class WelcomePWD extends StatefulWidget {
   const WelcomePWD({Key? key}) : super(key: key);
@@ -17,6 +18,15 @@ class WelcomePWD extends StatefulWidget {
 }
 
 class _WelcomePWDState extends State<WelcomePWD> {
+  _WelcomePWDState() {
+    /// Init Alan Button with project key from Alan Studio
+    AlanVoice.addButton(
+        "535c94e603651b0b8bd00005440cc44e2e956eca572e1d8b807a3e2338fdd0dc/stage");
+
+    /// Handle commands from Alan Studio
+    AlanVoice.onCommand.add((command) => _handleCommand(command.data));
+  }
+
   @override
   Widget build(BuildContext context) {
     final ap = Provider.of<AuthProvider>(context, listen: false);
@@ -281,5 +291,27 @@ class _WelcomePWDState extends State<WelcomePWD> {
         ),
       ),
     );
+  }
+
+  void _handleCommand(Map<String, dynamic> command) {
+    switch (command["command"]) {
+      case "findagencies":
+        Navigator.pushNamed(context, 'findagencies');
+        break;
+      case "sortagencies":
+        Navigator.pushNamed(context, 'sortagencies');
+        break;
+      case "schemes":
+        Navigator.pushNamed(context, 'schemes');
+        break;
+      case "profile":
+        Navigator.pushNamed(context, 'profile');
+        break;
+      case "home":
+        Navigator.pushNamed(context, 'home');
+        break;
+      default:
+        debugPrint("Unknown Command");
+    }
   }
 }

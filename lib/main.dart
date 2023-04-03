@@ -1,7 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fishersc/checkschemes.dart';
+import 'package:fishersc/findagencies.dart';
 import 'package:fishersc/provider/auth_provider.dart';
+import 'package:fishersc/screens/profile_screen.dart';
 import 'package:fishersc/screens/welcome_screen.dart';
+import 'package:fishersc/sortagencies.dart';
 import 'package:fishersc/splashscreen.dart';
+import 'package:fishersc/welcomepwd.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
@@ -35,10 +40,16 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
-        //title: "FlutterPhoneAuth",
+        routes: {
+          'findagencies': (context) => const FindAgencies(),
+          'checkschemes': (context) => const CheckSchemes(),
+          'sortagencies': (context) => const SortAgencies(),
+          'profile': (context) => const ProfileScreen(),
+          'home': (context) => const WelcomePWD(),
+        },
       ),
     );
   }
