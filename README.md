@@ -17,11 +17,18 @@ There are many government and non-government programs in place to support the co
 
 ## User Interface
 
-<p align="center">
-      <img src="UIEnabledMe/logo.jpg" align="left">
-      <img src="UIEnabledMe/login.jpg"
-      <img src="UIEnabledMe/cprofile.jpg" align="right">
-</p>
+<table>
+  <tr>
+    <td>First Screen Page</td>
+     <td>Holiday Mention</td>
+     <td>Present day in purple and selected day in pink</td>
+  </tr>
+  <tr>
+    <td><img src="UIEnabledMe/logo.jpg" width=270 height=480></td>
+    <td><img src="UIEnabledMe/login.jpg" width=270 height=480></td>
+    <td><img src="UIEnabledMe/cprofile.jpg" width=270 height=480></td>
+  </tr>
+ </table>
 
 
 ## Documentation
