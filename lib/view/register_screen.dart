@@ -1,6 +1,6 @@
 import 'package:country_picker/country_picker.dart';
-import 'package:fishersc/constants.dart';
-import 'package:fishersc/provider/auth_provider.dart';
+import 'package:fishersc/view/constants.dart';
+import 'package:fishersc/view_model/auth_provider.dart';
 import 'package:fishersc/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

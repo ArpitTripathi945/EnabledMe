@@ -5,10 +5,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:fishersc/model/user_model.dart';
-import 'package:fishersc/screens/otp_screen.dart';
-import 'package:fishersc/utils/utils.dart';
+import 'package:fishersc/view/otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthProvider extends ChangeNotifier {
@@ -197,4 +197,27 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
     s.clear();
   }
+}
+
+void showSnackBar(BuildContext context, String content) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      content: Text(content),
+    ),
+  );
+}
+
+Future<File?> pickImage(BuildContext context) async {
+  File? image;
+  try {
+    final pickedImage =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (pickedImage != null) {
+      image = File(pickedImage.path);
+    }
+  } catch (e) {
+    showSnackBar(context, e.toString());
+  }
+
+  return image;
 }

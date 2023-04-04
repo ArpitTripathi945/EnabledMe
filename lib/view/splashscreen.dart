@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:fishersc/screens/welcome_screen.dart';
+import 'package:fishersc/view/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,7 +12,6 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  
   void initState() {
     super.initState();
     Timer(

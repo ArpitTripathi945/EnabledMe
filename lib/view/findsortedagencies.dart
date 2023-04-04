@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fishersc/choosedatepopup.dart';
-import 'package:fishersc/constants.dart';
+import 'package:fishersc/view/choosedatepopup.dart';
+import 'package:fishersc/view/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

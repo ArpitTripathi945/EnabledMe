@@ -1,16 +1,16 @@
-import 'package:fishersc/constants.dart';
-import 'package:fishersc/findsortedagencies.dart';
+import 'package:fishersc/view/constants.dart';
+import 'package:fishersc/view/findhospitals.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SortAgencies extends StatefulWidget {
-  const SortAgencies({Key? key}) : super(key: key);
+class FindAgencies extends StatefulWidget {
+  const FindAgencies({Key? key}) : super(key: key);
 
   @override
-  State<SortAgencies> createState() => _SortAgenciesState();
+  State<FindAgencies> createState() => _FindAgenciesState();
 }
 
-class _SortAgenciesState extends State<SortAgencies> {
+class _FindAgenciesState extends State<FindAgencies> {
   bool allSelected = false;
 
   String? dropdownvalue1;
@@ -118,7 +118,7 @@ class _SortAgenciesState extends State<SortAgencies> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
-            child: Text("Sort Agencies",
+            child: Text("Find Agencies",
                 style: GoogleFonts.staatliches(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
@@ -126,10 +126,9 @@ class _SortAgenciesState extends State<SortAgencies> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
-            child: Text(
-                "List the agencies where in you want to book appointment.",
+            child: Text("Sort through the list of available benefits for you.",
                 style: GoogleFonts.poppins(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: const Color(0xff714C38))),
           ),
@@ -180,6 +179,7 @@ class _SortAgenciesState extends State<SortAgencies> {
                           );
                         }).toList(),
                         onChanged: (String? newValue) {
+                          // allSelected = true;
                           setState(() {
                             dropdownvalue1 = newValue!;
                           });
@@ -220,7 +220,7 @@ class _SortAgenciesState extends State<SortAgencies> {
                         isExpanded: true,
                         value: dropdownvalue2,
                         hint: Text(
-                          "Choose State/Union Territory",
+                          "Choose State/UT",
                           style: GoogleFonts.poppins(),
                         ),
                         underline: Container(),
@@ -236,8 +236,8 @@ class _SortAgenciesState extends State<SortAgencies> {
                           );
                         }).toList(),
                         onChanged: (String? newValue) {
+                          allSelected = true;
                           setState(() {
-                            allSelected = true;
                             dropdownvalue2 = newValue!;
                           });
                         }),
@@ -251,7 +251,7 @@ class _SortAgenciesState extends State<SortAgencies> {
             child: Center(
               child: SizedBox(
                 height: 50,
-                width: 330,
+                width: 340,
                 child: AbsorbPointer(
                   absorbing: !allSelected,
                   child: ElevatedButton(
@@ -259,7 +259,10 @@ class _SortAgenciesState extends State<SortAgencies> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const FindSortedAgencies()),
+                              builder: (context) => FindHospitals(
+                                    disability: dropdownvalue1!,
+                                    state: dropdownvalue2!,
+                                  )),
                         );
                       },
                       style: ElevatedButton.styleFrom(
