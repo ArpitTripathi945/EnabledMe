@@ -1,4 +1,4 @@
-import 'package:fishersc/constants.dart';
+import 'package:fishersc/view/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {

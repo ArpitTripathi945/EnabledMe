@@ -1,8 +1,8 @@
-import 'package:fishersc/constants.dart';
-import 'package:fishersc/provider/auth_provider.dart';
-import 'package:fishersc/screens/profile_screen.dart';
-import 'package:fishersc/screens/register_screen.dart';
-import 'package:fishersc/welcomepwd.dart';
+import 'package:fishersc/view/constants.dart';
+import 'package:fishersc/view_model/auth_provider.dart';
+import 'package:fishersc/view/profile_screen.dart';
+import 'package:fishersc/view/register_screen.dart';
+import 'package:fishersc/view/welcomepwd.dart';
 import 'package:fishersc/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

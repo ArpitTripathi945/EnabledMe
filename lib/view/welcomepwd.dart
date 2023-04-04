@@ -1,10 +1,10 @@
-import 'package:fishersc/checkschemes.dart';
-import 'package:fishersc/constants.dart';
-import 'package:fishersc/findagencies.dart';
-import 'package:fishersc/provider/auth_provider.dart';
-import 'package:fishersc/screens/profile_screen.dart';
-import 'package:fishersc/screens/welcome_screen.dart';
-import 'package:fishersc/sortagencies.dart';
+import 'package:fishersc/view/checkschemes.dart';
+import 'package:fishersc/view/constants.dart';
+import 'package:fishersc/view/findagencies.dart';
+import 'package:fishersc/view_model/auth_provider.dart';
+import 'package:fishersc/view/profile_screen.dart';
+import 'package:fishersc/view/welcome_screen.dart';
+import 'package:fishersc/view/sortagencies.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';

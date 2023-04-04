@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fishersc/constants.dart';
-import 'package:fishersc/welcomepwd.dart';
+import 'package:fishersc/view/constants.dart';
+import 'package:fishersc/view/welcomepwd.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
