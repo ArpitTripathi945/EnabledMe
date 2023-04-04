@@ -21,7 +21,7 @@ There are many government and non-government programs in place to support the co
   <tr>
     <td>Logo</td>
      <td>Login Page</td>
-     <td>Finish Profile</td>
+     <td>Welcome Page</td>
   </tr>
   <tr>
     <td><img src="UIEnabledMe/logo.jpg" width=270 height=500></td>
@@ -31,9 +31,9 @@ There are many government and non-government programs in place to support the co
  </table>
  <table>
   <tr>
-    <td>Logo</td>
-     <td>Login Page</td>
-     <td>Finish Profile</td>
+    <td>Find Agencies Page</td>
+     <td>Sort Agencies Page</td>
+     <td>Schemes Page</td>
   </tr>
   <tr>
     <td><img src="UIEnabledMe/findagencies2.jpg" width=270 height=500></td>
